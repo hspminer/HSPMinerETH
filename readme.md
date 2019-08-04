@@ -2,55 +2,70 @@
 
 # HSPMiner
 
-用于显卡GPU的`Ethereum(以太坊)`挖矿软件。
+GPU Miner for `Ethereum(以太坊)` mining.
 
-## 下载地址
+## Download
 
-[从这里下载](https://github.com/hspminer/HSPMinerETH/releases)
+[Download here](https://github.com/hspminer/HSPMinerETH/releases)
 
-## 社区支持
+## Community support
 
-官方QQ群： 870349675
+QQ： 870349675
 
-## 参考算力（默认频率）
+## Performance (stock frequency)
 
-| 算法             |  币种   | P106-100  |  P104-8G   |  1070ti  |  1080ti  |   2080   |
+| Algorithm        |  Coin   | P106-100  |  P104-8G   |  1070ti  |  1080ti  |   2080   |
 | :--------------- | :-----: | :-------: | :--------: | :------: | :------: | :------: |
 | ethash           |   ETH   |   21.2M   |   34.5M    |  26.9M   |   46M    |   35M    |
 
 
 ## 功能特点
 
-- 支持Windows和Linux
-- 支持备用矿池的设置
-- 支持SSL方式连接矿池
-- 开发手续费:
+* Support Windows & Linux.
+* Support backup mining pool configuration.
+* Support SSL connection to mining pools.
+* Dev Fee:
   - tensority_ethash 
 
 
-## 配置需求
+## Requirements
 
-- **NVIDIA显卡驱动版本，大于等于377**
-- 显卡参数需求:
+- **NVIDIA Driver version: >= 377**.
+- GPU Specific Requirements:
 
-|       算法       |  币种   | Compute Capability | 显存 (Win7 & Linux) | 显存 (Win10) |
-| :--------------: | :-----: | :----------------: | :-----------------: | :----------: |
+|    Algorithm     |  Coin   | Compute Capability | Memory (Win7 & Linux) | Memory (Win10) |
+| :--------------: | :-----: | :----------------: | :-------------------: | :------------: |
+|      ethash      |   ETH   | 6.0, 6.1, 7.0, 7.5 |          4GB          |      4GB       |
 
 
 
-## 使用样例
+## Sample Usages
 
 #### Ethereum
 
-- **f2pool:** HSPMiner.exe -epool eth.f2pool.com:8008 -ewal {替换钱包地址} -eworker {替换旷工名称} -epsw {替换密码} -logfile -api 0.0.0.0:16666
+- **f2pool:** HSPMiner.exe -epool eth.f2pool.com:8008 -ewal {your_self_wallet_address} -eworker {your_self_worker_name} -epsw {your_self_worker_password} -logfile -api 0.0.0.0:16666
 
-## 命令行参数
+-**beepool:** HSPMinerETH.exe -epool eth-pool.beepool.org:9530 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
 
-## API查询接口
+-**sparkpool:** HSPMinerETH.exe -epool cn.sparkpool.com:3333 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
 
-### 网页监控
+-**sparkpool:** HSPMinerETH.exe -epool eth.uupool.cn:8008 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
 
-在浏览器中打开 http://api_host:port/ 启动网页监控.
+
+## CMD options：
+  * -epool      pool address and port.
+  * -ewal       your self wallet address.
+  * -eworker    worker name.
+  * -ewal       worker password.
+  * -logfile    create log file.
+  * -api        \<host:port>    The endpoint for serving REST API.
+  
+
+
+
+### Web Monitor
+
+Open http://api_host:port/ in your browser to use web monitor.
 
 
 ## FAQ
@@ -61,40 +76,40 @@
 - `矿池的显示算力`
 
 
-## 修改记录
+## Change Log
 
 #### 2.0.9 2019/06/01
-- fix:去除使用时间限制
+- fix:Remove usage time limit.
 
 #### 2.0.8 2018/12/29
-- fix:延长使用周期到2019年6月1号
+- fix:Extend the life cycle to June 1, 2019.
 
 #### 2.0.7 2018/12/01
-- fix:修正部分矿池延迟显示错误的问题
+- fix:Fixed some problems with delayed display of mine pool.
 
 #### 2.0.6 2018/11/25
-- fix:修正丢job问题
+- fix:Fix lost job problem.
 
 #### 2.0.4 2018/11/23
-- fix:修正星火矿池协议错误问题
+- fix:Fixed sparkpool Mine Pool Protocol Error
 
 #### 2.0.3 2018/11/22
-- fix:修正延时率过高的问题
-- fix:修正部分矿池协议(用户名挖矿)不兼容问题
+- fix:Correct the problem that the delay rate is too high
+- fix:Fixed some inpot pool protocol (user name mining) incompatibility issues.
 
 #### 2.0.2 2018/11/18
-- add:调整job下发到gpu流程,细微提高算力
-- fix:修正本地算力计算不准确的问题
-- fix:修正鱼池等矿池拒绝率偏高的问题
+- add:Adjust the job sent to the gpu process, and slightly improve the power.
+- fix:Correct the problem of inaccurate calculation of local computing power.
+- fix:Fixed the problem of high rejection rate in ponds such as f2pool.
 
 #### 2.0.1 2018/11/16
-- add:增加矿池本地算力的显示
-- add:调整nonce生成算法,多GPU下Job下发更快更稳定
-- fix:修正部分矿池worker不对的问题
-- fix:调整部分统计信息显示的间隔时间和字体颜色
+- add:Add the display of the local calculation of the mining pool
+- add:Adjust the nonce generation algorithm, and the job is faster and more stable under multiple GPUs.
+- fix:Fixed a problem with some mine pool workers being wrong.
+- fix:Adjust the interval and font color of some statistics display.
 
 #### 2.0.0 2018/11/15
-- add:ETH算法发布,算力与其他挖矿软件保持相同同时,降低功耗8%-15%
+- add:The ETH algorithm is released, and the computing power remains the same as other mining software, while reducing power consumption by 8%-15%.
 
 
 
