@@ -19,7 +19,7 @@ QQ： 870349675
 | ethash           |   ETH   |   21.2M   |   34.5M    |  26.9M   |   46M    |   35M    |
 
 
-## 功能特点
+## Features
 
 * Support Windows & Linux.
 * Support backup mining pool configuration.
