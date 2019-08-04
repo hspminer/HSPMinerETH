@@ -44,12 +44,9 @@ QQ： 870349675
 #### Ethereum
 
 - **f2pool:** HSPMiner.exe -epool eth.f2pool.com:8008 -ewal {your_self_wallet_address} -eworker {your_self_worker_name} -epsw {your_self_worker_password} -logfile -api 0.0.0.0:16666
-
--**beepool:** HSPMinerETH.exe -epool eth-pool.beepool.org:9530 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
-
--**sparkpool:** HSPMinerETH.exe -epool cn.sparkpool.com:3333 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
-
--**sparkpool:** HSPMinerETH.exe -epool eth.uupool.cn:8008 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
+- **beepool:** HSPMinerETH.exe -epool eth-pool.beepool.org:9530 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
+- **sparkpool:** HSPMinerETH.exe -epool cn.sparkpool.com:3333 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
+- **sparkpool:** HSPMinerETH.exe -epool eth.uupool.cn:8008 -ewal 0x6881a96B728097bbe78Af30459987Db2D1C996ca -eworker x -epsw passd -logfile -api 0.0.0.0:16666
 
 
 ## CMD options：
